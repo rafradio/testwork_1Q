@@ -4,39 +4,45 @@ namespace StringArray
 {
     class InitialSettings : ProgramMain
     {
+        public string[] initialArray;
         public InitialSettings()
         {
             this.Initsets(0);
 
 
         }
-        public void Initsets(int iType)
+        public void Initsets(int counter)
         {
-            if (iType < this.numberOfStrings)
+            if (counter < this.numberOfStrings)
             {
-                string[] dataType = {"N", "M"};
-                Console.Write($"Введите пожалуйста текстовую строку для первоначального массива: ");
+                Console.Write("Введите пожалуйста текстовую строку для первоначального массива: ");
                 string enterUser = Console.ReadLine();
-                if (int.TryParse(enterUser, out int number))
+                if (!(enterUser == null))
                 {
-                    switch (iType)
+                    if (!(enterUser.ToLower() == "end"))
                     {
-                        case 0:
-//                            this.digitN = number;
-                            break;
-                        case 1:
-//                            this.digitM = number;
-                            break;
+                        counter += 1;
+                        Array.Resize(ref this.initialArray, counter);
+                        this.initialArray[counter - 1] = enterUser;
+                    
                     }
-                    iType += 1;
+                    else 
+                    {
+                        if (!(counter == 0)) return;
+                        else Console.WriteLine("Первоначальный массив еще пустой!");
+                    
+                    }
                 }
                 else
                 {
-                    Console.WriteLine("Вы ввели не число. Повторите!");
+                    Console.WriteLine("Вы ввели пустую строчку. Повторите!");
                 }
-                this.Initsets(iType);
+                this.Initsets(counter);
             }
+            else
+            {
             return;
+            }
         }
     }
 }
