@@ -46,16 +46,38 @@ namespace StringArray
         }
         public void CreateArray()
         {
+            int newArrayCounter = 0;
             for (int i = 0; i < this.initialArray.Length; i++)
             {
-                int newArrayCounter = 0;
                 if (this.initialArray[i].Length <= 3)
                 {
-                    Array.Resize(ref this.resultArray, newArrayCounter++);
+ //                   newArrayCounter +=1;
+                    Array.Resize(ref this.resultArray, ++newArrayCounter);
                     this.resultArray[newArrayCounter - 1] = this.initialArray[i];
                 }
             }
 
+        }
+        public void PrintArray()
+        {
+            Console.WriteLine("\nВведенный массив:");
+            for (int i = 0; i < this.initialArray.Length; i++)
+            {
+                Console.Write($"{this.initialArray[i]} ");
+            }
+            if (this.resultArray.Length == 0) Console.WriteLine("Результирующий массив пустой.");
+            else
+            {
+                Console.WriteLine("\n");
+                Console.BackgroundColor = ConsoleColor.Black;
+                Console.ForegroundColor = ConsoleColor.White;
+                Console.WriteLine("Новый массив:");
+                Console.BackgroundColor = ConsoleColor.Black;
+                for (int i = 0; i < this.resultArray.Length; i++)
+                { 
+                    Console.Write($"{this.resultArray[i]} ");
+                }
+            }
         }
     }
 }

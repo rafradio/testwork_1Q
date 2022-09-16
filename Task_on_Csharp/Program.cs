@@ -12,7 +12,8 @@ namespace StringArray
             InitialSettings init = new();
             // создаем первоначальный массив вводом с клавиатуры
             init.Initsets(0);
-            
+            init.CreateArray();
+            init.PrintArray(); 
         }
     }
 }
