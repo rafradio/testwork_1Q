@@ -4,21 +4,21 @@ namespace StringArray
 {
     class InitialSettings : ProgramMain
     {
-        public string[] initialArray;
-        public InitialSettings()
-        {
-            this.Initsets(0);
-
-
-        }
+        public string[] initialArray = new string[0];
+        public string[] resultArray = new string[0];
+//        public InitialSettings()
+//        {
+//            this.Initsets(0);
+//        }
         public void Initsets(int counter)
         {
             if (counter < this.numberOfStrings)
             {
                 Console.Write("Введите пожалуйста текстовую строку для первоначального массива: ");
-                string enterUser = Console.ReadLine();
-                if (!(enterUser == null))
+                var enterUser = Console.ReadLine();
+                if (!(enterUser == ""))
                 {
+                    // даем возможность выхода по "end"
                     if (!(enterUser.ToLower() == "end"))
                     {
                         counter += 1;
@@ -43,6 +43,19 @@ namespace StringArray
             {
             return;
             }
+        }
+        public void CreateArray()
+        {
+            for (int i = 0; i < this.initialArray.Length; i++)
+            {
+                int newArrayCounter = 0;
+                if (this.initialArray[i].Length <= 3)
+                {
+                    Array.Resize(ref this.resultArray, newArrayCounter++);
+                    this.resultArray[newArrayCounter - 1] = this.initialArray[i];
+                }
+            }
+
         }
     }
 }
