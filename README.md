@@ -15,7 +15,10 @@
 
 * Ниже приведена блок-схема к данной программе:
 <br>
-![](FlowChart_tw1Q.jpg)
+<img src="FlowChart_tw1Q.jpg"
+     alt="Flow chart"
+     style="float: left; margin-right: 10px;" />
+
 
 
 
