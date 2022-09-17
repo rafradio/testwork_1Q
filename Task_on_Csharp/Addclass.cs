@@ -51,7 +51,6 @@ namespace StringArray
             {
                 if (this.initialArray[i].Length <= 3)
                 {
- //                   newArrayCounter +=1;
                     Array.Resize(ref this.resultArray, ++newArrayCounter);
                     this.resultArray[newArrayCounter - 1] = this.initialArray[i];
                 }
@@ -61,23 +60,28 @@ namespace StringArray
         public void PrintArray()
         {
             Console.WriteLine("\nВведенный массив:");
-            for (int i = 0; i < this.initialArray.Length; i++)
+            for (int i = 0; i < this.initialArray.Length - 1; i++)
             {
-                Console.Write($"{this.initialArray[i]} ");
+                Console.Write($"'{this.initialArray[i]}', ");
             }
-            if (this.resultArray.Length == 0) Console.WriteLine("Результирующий массив пустой.");
+            Console.Write($"'{this.initialArray[this.initialArray.Length - 1]}' ");
+
+            if (this.resultArray.Length == 0) Console.WriteLine("\n\nРезультирующий массив пустой.");
             else
             {
                 Console.WriteLine("\n");
-                Console.BackgroundColor = ConsoleColor.Black;
+                Console.BackgroundColor = ConsoleColor.Blue;
                 Console.ForegroundColor = ConsoleColor.White;
+
                 Console.WriteLine("Новый массив:");
                 Console.BackgroundColor = ConsoleColor.Black;
-                for (int i = 0; i < this.resultArray.Length; i++)
+                for (int i = 0; i < this.resultArray.Length - 1; i++)
                 { 
-                    Console.Write($"{this.resultArray[i]} ");
+                    Console.Write($"'{this.resultArray[i]}', ");
                 }
+                Console.Write($"'{this.resultArray[this.resultArray.Length - 1]}' ");
             }
+            Console.BackgroundColor = ConsoleColor.Black;
         }
     }
 }
