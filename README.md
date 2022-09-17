@@ -1,7 +1,7 @@
 <img src="GB.png" width="10%" height="10%"
      alt="Flow chart"
      style="float: left; margin-right: 10px; display: inline;" />
-<span style="display: inline;">Итоговая работа за 1 четверть.</span><br>
+<span style="display: inline;"><h2>Итоговая работа за 1 четверть.</h2></span><br>
 
 #### Студент GeekBrains: Абдюшев Р.Н.
 #### GU | Разработчик | 2042
