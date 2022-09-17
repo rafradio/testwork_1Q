@@ -6,10 +6,6 @@ namespace StringArray
     {
         public string[] initialArray = new string[0];
         public string[] resultArray = new string[0];
-//        public InitialSettings()
-//        {
-//            this.Initsets(0);
-//        }
         public void Initsets(int counter)
         {
             if (counter < this.numberOfStrings)
