@@ -1,3 +1,6 @@
+<img src="GB.png"
+     alt="Flow chart"
+     style="float: left; margin-right: 10px;" />
 # Итоговая работа за 1 четверть.
 #### Студент GeekBrains: Абдюшев Р.Н.
 #### GU | Разработчик | 2042
