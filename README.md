@@ -1,4 +1,4 @@
-<img src="GB.png" width="10%" height="10%"
+<img src="GB.png" width="15%" height="15%"
      alt="Flow chart"
      style="float: left; margin-right: 10px; display: inline;"/>
 
