@@ -1,6 +1,5 @@
 <img src="GB.png" width="15%" height="15%"
-     alt="Flow chart"
-     style="float: left; margin-right: 10px; display: inline;"/>
+     alt="Flow chart"/>
 
 # Итоговая работа за 1 четверть.
 #### Студент GeekBrains: Абдюшев Р.Н.
