@@ -1,4 +1,4 @@
-<img src="GB.png" width="30%" height="30%"
+<img src="GB.png" width="10%" height="10%"
      alt="Flow chart"
      style="float: left; margin-right: 10px; display: inline;" />
 <span style="display: inline;">Итоговая работа за 1 четверть.</span><br>
